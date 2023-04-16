@@ -24,3 +24,27 @@ Udemy resource, [link](https://www.udemy.com/course/ultimate-python-de-cero-a-pr
 
 ## Useful links
 - PEP 8 – Style Guide for Python Code -> [link](https://peps.python.org/pep-0008/)
+
+
+
+## SQLITE
+
+In case of the following error appears:
+
+```
+ModuleNotFoundError: No module named '_sqlite3'
+```
+
+
+... then, install `sqlite` dev package
+
+```
+> sudo apt-get update -y
+> sudo apt-get install -y libsqlite3-dev
+```
+Cd your python installer directory and:
+```
+> ./configure --prefix=/opt/python3.7.4 --with-ssl --with-pydebugx --enable-loadable-sqlite-extensions --enable-optimizations
+> make
+> make install
+```
