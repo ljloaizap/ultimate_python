@@ -34,6 +34,7 @@ def send_email():
     mime_image = MIMEImage(img_path.read_bytes())
     message.attach(mime_image)
 
+    # Need to enable option in https://myaccount.google.com/u/0/lesssecureapps
     with smtplib.SMTP(host="smtp.gmail.com", port=587) as smtp:
         try:
             smtp.ehlo()  # This is to identify ourselves
