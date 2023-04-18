@@ -48,3 +48,45 @@ Cd your python installer directory and:
 > make
 > make install
 ```
+
+## PIP, Virtual envs & pipenv
+
+### PIP
+
+```
+pip install requests
+pip list
+pip uninstall requests
+pip install requests==2.18.1
+--pip install requests==2.18.*
+--pip install requests==2.*
+
+```
+
+### venv
+Create virtual environment within current folder
+```
+python3 -m venv env
+deactivate
+```
+
+### pipenv
+Create virtual environment and (un)install dependencies
+```
+pip install pipenv
+pipenv install requests
+pipenv --venv  # virtualenv location
+pipenv shell  # activate virtualenv in cmd
+exit  # 'deactivate'
+#
+pipenv install  # create virtualenv from Pipfile 
+pipenv install --ignore-pipfile  # based on Pipfile.lock
+```
+
+**pipenv: dependencies mgmt**
+```
+pipenv graph
+pipenv update --outdated  # packages outdated
+pip update requests
+pip update  # all packages
+```
