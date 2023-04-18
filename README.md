@@ -60,7 +60,6 @@ pip uninstall requests
 pip install requests==2.18.1
 --pip install requests==2.18.*
 --pip install requests==2.*
-
 ```
 
 ### venv
@@ -89,4 +88,9 @@ pipenv graph
 pipenv update --outdated  # packages outdated
 pip update requests
 pip update  # all packages
+```
+
+## Overall dependencies
+```
+pip install sendgrid
 ```
