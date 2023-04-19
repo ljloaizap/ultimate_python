@@ -24,6 +24,7 @@ Udemy resource, [link](https://www.udemy.com/course/ultimate-python-de-cero-a-pr
 
 ## Useful links
 - PEP 8 – Style Guide for Python Code -> [link](https://peps.python.org/pep-0008/)
+- Fake API `(typicode)` -> [link](https://jsonplaceholder.typicode.com/)
 
 
 
