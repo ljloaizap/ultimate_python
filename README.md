@@ -93,6 +93,7 @@ pip update  # all packages
 
 ## Overall dependencies
 ```
-pip install sendgrid  # emails
+pipenv install sendgrid  # emails
 pipenv install beautifulsoup4  # web scrapping
+pipenv install openpyxl  # excel
 ```
