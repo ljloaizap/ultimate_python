@@ -8,6 +8,8 @@ requests = "*"
 beautifulsoup4 = "*"
 openpyxl = "*"
 sendgrid = "*"
+selenium = "*"
+webdriver-manager = "*"
 
 [dev-packages]
 

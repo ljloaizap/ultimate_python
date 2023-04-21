@@ -96,4 +96,5 @@ pip update  # all packages
 pipenv install sendgrid  # emails
 pipenv install beautifulsoup4  # web scrapping
 pipenv install openpyxl  # excel
+pipenv install selenium webdriver-manager  # automated tests with Selenium
 ```
