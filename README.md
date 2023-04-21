@@ -112,27 +112,34 @@ pipenv install django==4.1.7
 # Django project
 
 ## Installation
-Within the virtual environment, cd to the directory when Django project is expected to be located. 
+Within the virtual environment, cd the directory when Django project is expected to be located. 
 For this sample, project name is `productly`. -- A _Django_ project can have >=1 apps.
 ```
 pipenv shell  # activate virtual env
+mkdir productly
 cd productly  # cd project dir
 django-admin startproject productly .  # make sure to type last dot.
-python manage.py runserver  # run project
+python manage.py runserver  # run project  :star:
 ```
 
 
 ## Apps Creation
 ### Creating first app
 1. Run `python manage.py startapp products` command
-2. Go to _{app_dir}_ and open _apps.py_ file --> `products/apps.py`
+2. Go to _{app_dir}_ and open _apps.py_ file: `products/apps.py`
 3. Copy class_name, e.g., `ProductsConfig`
-4. Go to _{project_dir}_ and open _settings.py_ file --> `productly/settings.py`
-5. Edit `INSTALLED_APPS` list to add new entry `{app_dir}.apps.{class_name}` --> `'products.apps.ProductsConfig'`
+4. Go to _{project_dir}_ and open _settings.py_ file: `productly/settings.py`
+5. Edit `INSTALLED_APPS` list to add new entry `{app_dir}.apps.{class_name}`: `'products.apps.ProductsConfig'`
 
 ### Adding urls
 
-6. Go to _{project_dir}_ and open _urls.py_ file -> `productly/urls.py`
+6. Go to _{project_dir}_ and open _urls.py_ file: `productly/urls.py`
 7. Append {app} url in `urlpatterns` array
-8. Add _view_ reference in a new _urls.py_ file in _{app_dir}_ --> `products/urls.py`
-9. Go to _{app_dir}_ > _views_ file and add new method referenced in prior point -> `products/views.py`, e.g., `def index(request)`
+8. Add _view_ reference in a new _urls.py_ file in _{app_dir}_ : `products/urls.py`
+9. Go to _{app_dir}_ > _views_ file and add new method referenced in prior point: `products/views.py`, e.g., `def index(request)`
+
+### ORM & db migrations
+10. Add models (classes) in _{app_dir}_ > _models_ file: `products/models.py`
+11. Make sure `productly/settings.py` has an entry for the app `products` in `INSTALLED_APPS` list, and
+12. Make migrations: `python manage.py makemigrations`
+13. Run migrations: `python manage.py migrate`  :star:
