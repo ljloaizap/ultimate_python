@@ -101,6 +101,8 @@ pipenv install django==4.1.7
 ```
 
 ## Django project
+
+### Django Installation
 Within the virtual environment, cd to the directory when Django project is expected to be located. 
 For this sample, project name is `productly`
 ```
@@ -111,3 +113,19 @@ python manage.py runserver  # run project
 ```
 
 **_Note_:** one _Django_ project can have 1 or more applications
+
+
+### Apps Creation
+1. Run `python manage.py startapp products` command
+2. Go to {app_dir} and open `apps.py` file --> `products/apps.py`
+3. Copy class_name, e.g., `ProductsConfig`
+4. Go to {project_dir} and open `settings.py` file --> `productly/settings.py`
+5. Edit `INSTALLED_APPS` array to add new entry `{app_dir}.apps.{class_name}` --> `'products.apps.ProductsConfig'`
+---
+
+_Add URLs_
+
+6. Go to {project_dir} and open _urls.py_ file -> `productly/urls.py`
+7. Append {app} url in `urlpatterns` array
+8. Add _view_ reference in a new `urls.py` file in {app_dir} --> `products/urls.py`
+9. Go to {app_dir} > _views_ file and add new method referenced in prior point -> `products/views.py`, e.g., `def index(request)`
