@@ -97,4 +97,17 @@ pipenv install sendgrid  # emails
 pipenv install beautifulsoup4  # web scrapping
 pipenv install openpyxl  # excel
 pipenv install selenium webdriver-manager  # automated tests with Selenium
+pipenv install django==4.1.7
 ```
+
+## Django project
+Within the virtual environment, cd to the directory when Django project is expected to be located. 
+For this sample, project name is `productly`
+```
+pipenv shell  # activate virtual env
+cd productly  # cd project dir
+django-admin startproject productly .  # make sure to type last dot.
+python manage.py runserver  # run project
+```
+
+**_Note_:** one _Django_ project can have 1 or more applications

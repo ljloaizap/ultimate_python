@@ -10,6 +10,7 @@ openpyxl = "*"
 sendgrid = "*"
 selenium = "*"
 webdriver-manager = "*"
+django = "==4.1.7"
 
 [dev-packages]
 
