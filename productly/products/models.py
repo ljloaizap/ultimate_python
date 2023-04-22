@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 
@@ -15,3 +16,4 @@ class Product(models.Model):
         Category,
         on_delete=models.CASCADE
     )
+    created_at = models.DateTimeField(default=timezone.now)
