@@ -8,7 +8,7 @@ class Category(models.Model):
     name = models.CharField(max_length=255)
 
     def __str__(self):
-        return str(self.name)
+        return self.name
 
     class Meta:
         verbose_name_plural = 'categories'
@@ -25,4 +25,4 @@ class Product(models.Model):
     created_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return str(self.name)
+        return self.name
