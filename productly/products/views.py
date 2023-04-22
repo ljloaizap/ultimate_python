@@ -20,4 +20,5 @@ def index(request):
 
 
 def detail(request, product_id):
-    return HttpResponse(product_id)
+    product = Product.objects.get(id=product_id)
+    return render(request, 'detail.html', context={'product': product})
