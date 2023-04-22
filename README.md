@@ -108,6 +108,7 @@ pipenv install pylint-django
 # Useful links
 - PEP 8 – Style Guide for Python Code -> [link](https://peps.python.org/pep-0008/)
 - Fake API `(typicode)` -> [link](https://jsonplaceholder.typicode.com/)
+- Complete list of github markdown emoji markup -> [link](https://gist.github.com/rxaviers/7360908)
 
 <br>
 
@@ -183,4 +184,8 @@ URLs params are useful for views such as detail pages. To do so:
 8. Add new function to render the template described above: `def form(request):`
 9. Go to app URLs file: `products/urls.py`
 10. Add url for that form page: `path('form', views.form, name='form')`
-11. Customize form: add class `CustomFormRenderer` and `FORM_RENDERER` in `settings.py`
+
+### Customize forms and fields
+11. Forms: Add class `CustomFormRenderer` and `FORM_RENDERER` in `settings.py`
+12. Fields: go to [django github site](https://github.com/django/django/tree/main/django/forms/templates/django/forms/widgets) to copy code for the needed elements, such as `input.html`, `select.html`, etc.
+13. :information_source: Those _html_ files must be copied using exactly the same structure as django github site.
