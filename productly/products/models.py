@@ -7,6 +7,9 @@ from django.utils import timezone
 class Category(models.Model):
     name = models.CharField(max_length=255)
 
+    def __str__(self):
+        return str(self.name)
+
     class Meta:
         verbose_name_plural = 'categories'
 
@@ -20,3 +23,6 @@ class Product(models.Model):
         on_delete=models.CASCADE
     )
     created_at = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return str(self.name)

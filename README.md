@@ -148,3 +148,4 @@ python manage.py runserver  # run project  :star:
 14. Create admin user: `python manage.py createsuperuser`
 15. Register models > Go to {app_dir} > _admin_ module: `products/admin.py`
 16. Edit module to register each model, e.g., `admin.site.register(Category)`
+15. Custom admin site: add admin classes in {app_dir} _admin_: `products/admin.py`
