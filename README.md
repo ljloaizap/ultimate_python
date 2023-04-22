@@ -183,3 +183,4 @@ URLs params are useful for views such as detail pages. To do so:
 8. Add new function to render the template described above: `def form(request):`
 9. Go to app URLs file: `products/urls.py`
 10. Add url for that form page: `path('form', views.form, name='form')`
+11. Customize form: add class `CustomFormRenderer` and `FORM_RENDERER` in `settings.py`
