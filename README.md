@@ -157,3 +157,9 @@ Pylint indicates some compilation errors because does not totally match with dja
 2. Create new file (only with extension): `.pylintrc`
 3. Indicate plugins to load by adding this line in that newly created file (_.pylintrc_): `load-plugins=pylint-django` 
 4. Voilà!
+
+### Share base template across the apps
+1. Go to root directory, which is at the same level as {app_dir} is, e.g., `productly` dir.
+2. Create new directory `templates` at the same as {app_dir} is.
+3. Add `base.html` file in `templates` new dir.
+4. Modify `settings.py` to tell Django which templates dir to load in `TEMPLATES` list field.
