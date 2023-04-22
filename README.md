@@ -178,7 +178,7 @@ URLs params are useful for views such as detail pages. To do so:
 3. Under {app_dir}, create _forms_ file: `products/forms.py`
 4. In _forms.py_, create new class form, e.g., `class ProductForm(ModelForm)`
 5. Go to _templates_ and create app form, e.g., `products/templates/product_form.html`
-6. !!! Add `csrf_token` for security purposes.. It always must be added. !!!
+6. :warning: Add `csrf_token` for **security** purposes. **It always must be added.** :warning:
 7. Open {app_dir} _views_ file: `products/views.py`
 8. Add new function to render the template described above: `def form(request):`
 9. Go to app URLs file: `products/urls.py`
