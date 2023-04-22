@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<form action="{% url 'products:form' %}" method='post'>
+<form action="{% url 'products:form' %}" method='post' novalidate>
     <!--Hidden input for security purposes-->
     {% csrf_token %}
     {{ form }}
