@@ -11,6 +11,7 @@ sendgrid = "*"
 selenium = "*"
 webdriver-manager = "*"
 django = "==4.1.7"
+pylint-django = "*"
 
 [dev-packages]
 

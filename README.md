@@ -100,6 +100,7 @@ pipenv install beautifulsoup4  # web scrapping
 pipenv install openpyxl  # excel
 pipenv install selenium webdriver-manager  # automated tests with Selenium
 pipenv install django==4.1.7
+pipenv install pylint-django
 ```
 
 
@@ -149,3 +150,10 @@ python manage.py runserver  # run project  :star:
 15. Register models > Go to {app_dir} > _admin_ module: `products/admin.py`
 16. Edit module to register each model, e.g., `admin.site.register(Category)`
 15. Custom admin site: add admin classes in {app_dir} _admin_: `products/admin.py`
+
+### Pylint with Django
+Pylint indicates some compilation errors because does not totally match with django instructions. In order to avoid that, follow these steps:
+1. Install new package: `pipenv install pylint-django`
+2. Create new file (only with extension): `.pylintrc`
+3. Indicate plugins to load by adding this line in that newly created file (_.pylintrc_): `load-plugins=pylint-django` 
+4. Voilà!
