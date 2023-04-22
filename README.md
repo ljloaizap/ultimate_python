@@ -8,6 +8,7 @@
 - `pylint` by Microsoft
 - Open `palette` view and look for Format. Install `autopep 8`.
 - Auto formatting: `manage > settings`, then type `formatOnSave` and tick first option _"Format a file on save"_.
+- `Django` by Baptiste Darthenay
 
 
 ### Concepts to keep in mind
@@ -170,3 +171,15 @@ URLs params are useful for views such as detail pages. To do so:
 2. Add new URL specifying name and params
 3. If need to specify param type, put it before param name: `<int:product_id>`
 4. Go to _views_ and add URL function in {app_dir}: `products/views.py`
+
+### Forms
+1. Register app. Go to `settings.py` and locate `INSTALLED_APPS` list
+2. Add app `django.forms` **before** registering the rest of custom apps
+3. Under {app_dir}, create _forms_ file: `products/forms.py`
+4. In _forms.py_, create new class form, e.g., `class ProductForm(ModelForm)`
+5. Go to _templates_ and create app form, e.g., `products/templates/product_form.html`
+6. !!! Add `csrf_token` for security purposes.. It always must be added. !!!
+7. Open {app_dir} _views_ file: `products/views.py`
+8. Add new function to render the template described above: `def form(request):`
+9. Go to app URLs file: `products/urls.py`
+10. Add url for that form page: `path('form', views.form, name='form')`

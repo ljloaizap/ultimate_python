@@ -1,5 +1,7 @@
 from django.http import Http404, HttpResponse
 from django.shortcuts import render, get_object_or_404
+
+from .forms import ProductForm
 from .models import Product
 
 # Create your views here.
@@ -26,3 +28,13 @@ def detail(request, product_id):
 
     product = get_object_or_404(Product, id=product_id)
     return render(request, 'detail.html', context={'product': product})
+
+
+def form(request):
+    form = ProductForm()
+
+    return render(
+        request,
+        'product_form.html',
+        context={'form': form}
+    )
