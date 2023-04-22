@@ -143,3 +143,8 @@ python manage.py runserver  # run project  :star:
 11. Make sure `productly/settings.py` has an entry for the app `products` in `INSTALLED_APPS` list, and
 12. Make migrations: `python manage.py makemigrations`
 13. Run migrations: `python manage.py migrate`  :star:
+
+### Admin panel
+14. Create admin user: `python manage.py createsuperuser`
+15. Register models > Go to {app_dir} > _admin_ module: `products/admin.py`
+16. Edit module to register each model, e.g., `admin.site.register(Category)`
