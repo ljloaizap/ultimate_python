@@ -163,3 +163,10 @@ Pylint indicates some compilation errors because does not totally match with dja
 2. Create new directory `templates` at the same as {app_dir} is.
 3. Add `base.html` file in `templates` new dir.
 4. Modify `settings.py` to tell Django which templates dir to load in `TEMPLATES` list field.
+
+### URLs with params
+URLs params are useful for views such as detail pages. To do so:
+1. Go to _urls_ file of {app_dir}: `products/urls.py`
+2. Add new URL specifying name and params
+3. If need to specify param type, put it before param name: `<int:product_id>`
+4. Go to _views_ and add URL function in {app_dir}: `products/views.py`
