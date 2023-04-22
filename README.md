@@ -188,4 +188,4 @@ URLs params are useful for views such as detail pages. To do so:
 ### Customize forms and fields
 11. Forms: Add class `CustomFormRenderer` and `FORM_RENDERER` in `settings.py`
 12. Fields: go to [django github site](https://github.com/django/django/tree/main/django/forms/templates/django/forms/widgets) to copy code for the needed elements, such as `input.html`, `select.html`, etc.
-13. :information_source: Those _html_ files must be copied using exactly the same structure as django github site.
+13. :warning: Those _html_ files must be copied using exactly the same structure as django github site.
