@@ -186,6 +186,15 @@ URLs params are useful for views such as detail pages. To do so:
 10. Add url for that form page: `path('form', views.form, name='form')`
 
 ### Customize forms and fields
-11. Forms: Add class `CustomFormRenderer` and `FORM_RENDERER` in `settings.py`
-12. Fields: go to [django github site](https://github.com/django/django/tree/main/django/forms/templates/django/forms/widgets) to copy code for the needed elements, such as `input.html`, `select.html`, etc.
+11. **Forms**: Add class `CustomFormRenderer` and `FORM_RENDERER` in `settings.py`
+12. **Fields**: go to [django github site](https://github.com/django/django/tree/main/django/forms/templates/django/forms/widgets) to copy code for the needed elements, such as `input.html`, `select.html`, etc.
 13. :warning: Those _html_ files must be copied using exactly the same structure as django github site.
+
+### Create custom filters
+A custom filter was used in this project for validation purposes in the forms, so the fields have some css class of bootstrap framework to be highlighted in red when data is invalid to be submitted. In order to create those filters:
+1. Under _{app_dir}_ dir, create new folder `templatetags`
+2. In prior dir, add module `add_attr.py` to register new filter
+3. Open `form_snippet.html` file. At the beginning, add `{% load add_attr %}`
+4. Using `|` operator, indicate the portion of code that needs to be added. For this case, it was `field|add_attr:"class:is-invalid"`
+5. Later, go to the html element, e.g., `input.html` file and add widget class like `class="form-control {{ widget.attrs.class }}"`
+6. Voilà!
