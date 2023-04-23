@@ -102,6 +102,7 @@ pipenv install openpyxl  # excel
 pipenv install selenium webdriver-manager  # automated tests with Selenium
 pipenv install django==4.1.7
 pipenv install pylint-django
+pipenv install -U scikit-learn scipy matplotlib  # For Machine Learning section
 ```
 
 
@@ -110,6 +111,7 @@ pipenv install pylint-django
 - Fake API `(typicode)` -> [link](https://jsonplaceholder.typicode.com/)
 - Complete list of github markdown emoji markup -> [link](https://gist.github.com/rxaviers/7360908)
 - Kaggle -> [link](https://www.kaggle.com/)
+- Scikit-learn, Machine Learning in Python -> [link](https://scikit-learn.org/stable/)
 
 <br>
 
@@ -217,6 +219,12 @@ Django extension has some conflicts with HTML interpreter. To be able to swap be
 6. Ask the model to make predictions
 7. Feedback: Assess and improve
 
+## Data Clean-up
+In this phase, data must be cleaned-up to remove
+1. `NULL` values
+2. **Duplicated** data
+3. **Incorrect** data -> for instance, not valid data according to column name or data type.
+4. **Not relevant** data -> does not represent significant input for the model
 
 ## Tools and libraries
 1. `numpy`
@@ -229,3 +237,5 @@ Django extension has some conflicts with HTML interpreter. To be able to swap be
 1. Download [Video Game Sales with Ratings](https://www.kaggle.com/datasets/rush4ratio/video-game-sales-with-ratings)
  .CSV file
 2. Import data into Jupyter Notebook
+3. Get new data from _holamundo_, [here](https://holamundo.io/wp-content/uploads/2023/04/juegos-ml.csv.zip)
+4. Create notebook to build model for games prediction
