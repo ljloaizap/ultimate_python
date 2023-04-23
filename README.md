@@ -198,3 +198,9 @@ A custom filter was used in this project for validation purposes in the forms, s
 4. Using `|` operator, indicate the portion of code that needs to be added. For this case, it was `field|add_attr:"class:is-invalid"`
 5. Later, go to the html element, e.g., `input.html` file and add widget class like `class="form-control {{ widget.attrs.class }}"`
 6. Voilà!
+
+### Switch (Django) HTML interpreter
+Django extension has some conflicts with HTML interpreter. To be able to swap between `HTML` or `Django HTML` interpreter, then:
+1. Within an html file, use `Ctrl + Shift + P` shortcut
+2. Type and select `Change Language Mode` option and hit `Enter`
+3. Later, select `HTML` or `Django HTML`
