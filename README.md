@@ -109,6 +109,7 @@ pipenv install pylint-django
 - PEP 8 – Style Guide for Python Code -> [link](https://peps.python.org/pep-0008/)
 - Fake API `(typicode)` -> [link](https://jsonplaceholder.typicode.com/)
 - Complete list of github markdown emoji markup -> [link](https://gist.github.com/rxaviers/7360908)
+- Kaggle -> [link](https://www.kaggle.com/)
 
 <br>
 
@@ -223,3 +224,8 @@ Django extension has some conflicts with HTML interpreter. To be able to swap be
 3. `MatPplotlib` -> Graphs in 2 dimensions
 4. `Scikit-learn`
 5. `Tensorflow` -> focused on neuronal networks
+
+## Video Games project
+1. Download [Video Game Sales with Ratings](https://www.kaggle.com/datasets/rush4ratio/video-game-sales-with-ratings)
+ .CSV file
+2. Import data into Jupyter Notebook
