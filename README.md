@@ -204,3 +204,22 @@ Django extension has some conflicts with HTML interpreter. To be able to swap be
 1. Within an html file, use `Ctrl + Shift + P` shortcut
 2. Type and select `Change Language Mode` option and hit `Enter`
 3. Later, select `HTML` or `Django HTML`
+
+
+# Machine Learning project
+## Steps needed for a project
+1. Import data
+2. Clean up data
+3. Split data into training and testing. Usually 80% and 20%, respectively.
+4. Select a model (algorithm)
+5. Train the model
+6. Ask the model to make predictions
+7. Feedback: Assess and improve
+
+
+## Tools and libraries
+1. `numpy`
+2. `pandas`
+3. `MatPplotlib` -> Graphs in 2 dimensions
+4. `Scikit-learn`
+5. `Tensorflow` -> focused on neuronal networks
